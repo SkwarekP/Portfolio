@@ -77,7 +77,7 @@ function MainPage() {
                         </div>
                         <div className={classes.row}>
                         <h3>Starbucks</h3>
-                            <button className={classes.github__btn}><a href="https://github.com/SkwarekP/Starbucks-app">github</a></button>
+                            <a href="https://github.com/SkwarekP/Starbucks-app"><button className={classes.github__btn}>github</button></a>
                         </div>
                     </header>
                     <p>The Starbucks app currently exists. I found that on https://www.frontendpractice.com.
@@ -93,7 +93,7 @@ function MainPage() {
                         </div>
                         <div className={classes.row}>
                         <h3>psgym</h3>
-                            <button className={classes.github__btn}><a href="https://github.com/SkwarekP/PSGYM">github</a></button>
+                            <a href="https://github.com/SkwarekP/PSGYM"><button className={classes.github__btn}>github</button></a>
                         </div>
                     </header>
                     <p>
