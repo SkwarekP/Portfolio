@@ -1,0 +1,230 @@
+img {
+    max-width:100%;
+}
+.container {
+    position:fixed;
+    top:50%;
+    left:50%;
+    width:500px;
+    transform: translate(-50%, -50%);
+    background:#363333;
+    color:#FFFFFF;
+    border-radius:20px;
+    z-index:10;
+    animation:modalSlide ease-in-out .4s;
+}
+.container__reverseSlide {
+    animation:modalSlideReverse ease-in-out .4s;
+}
+
+.contact {
+    padding:1rem 0;
+    text-align:center;
+    background: #E16428;
+    border-radius:20px 20px 0 0;
+}
+
+.onClose__btn {
+    cursor:pointer;
+    position:absolute;
+    right:1rem;
+    top:1.5rem;
+    width:32px;
+    background:inherit;
+    border:none;
+}
+.onClose__btn img:hover{
+    border-radius:50%;
+    background: red;
+}
+.flex__row {
+    margin-top:1rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}
+.flex__row a:hover {
+    opacity:0.6;
+}
+.flex__row img {
+    width:32px;
+    border-radius:30%;
+    cursor:pointer;
+}
+.email__btn {
+    cursor: pointer;
+    padding:1rem 1rem 1rem 3rem;
+    border:none;
+    background:#272121;
+    color:#FFFFFF;
+    border-radius:100px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size:1rem;
+}
+.email__btn:hover {
+    opacity:0.5
+}
+.email__btn::before {
+    content:url("./images/gmail.webp");
+    position: absolute;
+    top:78px;
+    left:180px;
+}
+.email__btn_copied::before {
+    background-image:url("./images/gmail.webp");
+    position: absolute;
+    top:78px;
+    left:215px;
+}
+.contact h1 {
+    margin:0;
+}
+.form {
+    padding:1rem;
+    text-align:center;
+}
+.form input, .form textarea {
+    display:block;
+    width:300px;
+    padding:0.4rem;
+    font-size:1rem;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.form textarea {
+    width:90%;
+    height:20vh;
+}
+.input__container input, .input__container textarea{
+    margin:1rem auto;
+}
+.input__form {
+    margin-top:1rem;
+}
+.input__form label {
+    font-size:1.05rem;
+    font-weight: bolder;
+}
+.submit__btn {
+    margin-top:.5rem;
+    padding:.5rem 2rem;
+    font-size:.95rem;
+    font-weight:bold;
+    background:#E16428;
+    border:none;
+    border-radius:10px;
+    color:#FFFFFF;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+.submit__btn:hover {
+    background: black;
+    opacity:0.6;
+}
+.submit__btn:disabled {
+    opacity:0.3;
+}
+.backdrop {
+    width:100%;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0, 0, 0, 0.80);
+    filter:blur(10px);
+    z-index:5;
+}
+.email__successfully {
+    color:lightgreen;
+    font-weight: bolder;
+}
+.loading__spinner {
+    box-sizing: border-box;
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin:0 auto;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+@media (max-width:768px) {
+
+    .container {
+        width:300px;
+    }
+    .contact header h1{
+        font-size:1.6rem;
+    }
+    .flex__row {
+        gap:1rem;
+    }
+    .flex__row img {
+        width:28px;
+    }
+    .email__btn {
+        cursor: pointer;
+        padding:.5rem;
+        font-size:.8rem;
+    }
+    .email__btn::before {
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+    }
+    .input__form label {
+        font-size:.9rem;
+        font-weight: bolder;
+    }
+    .form input, .form textarea {
+        width:275px;
+        padding:0.2rem;
+        font-size:1rem;
+    }
+    .input__container input, .input__container textarea{
+        margin:.75rem auto;
+    }
+    .submit__btn {
+        margin-top:.5rem;
+        padding:.3rem 2rem;
+        font-size:.8rem;
+    }
+    .onClose__btn {
+        top:1.3rem;
+        width:28px;
+    }
+    .input__form {
+        margin-top:.5rem;
+    }
+}
+
+@keyframes modalSlide {
+    0% {
+        transform: translate(-300%, -50%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+@keyframes modalSlideReverse {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        transform:translate(-350%, -50%);
+    }
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
